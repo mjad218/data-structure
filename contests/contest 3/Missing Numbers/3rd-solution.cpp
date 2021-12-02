@@ -32,20 +32,13 @@ int binarrySearch(int value, int start, int end, vector<int> arr) {
 }
 
 
-int calculateFreq(int i, vector<int> arr, int& flag) {
-	int freq = 1, k = 1;
-
-	while (i + k < (int)arr.size() && arr.at(i + k) == arr.at(i)) {
-		freq++;
-		k++;
-	}
-	k = -1;
-	while (i + k > 0 && arr.at(i + k) == arr.at(i)) {
-		freq++;
-		k--;
-		flag--;
-	}
-	return freq;
+int calculateFreq(int value, vector<int> arr) {
+	int freq = 0;
+	int index = binarrySearch(value, 0, arr.size(), arr); // logn
+	if (index == -1) return freq;
+	freq++;
+	arr.erase(arr.begin() + index);
+	return freq + calculateFreq(value, arr);
 }
 // A non optimized solution
 // Time Complexity : nlogn + nlogn + nlogn = O(nlogn) 
@@ -53,27 +46,28 @@ int calculateFreq(int i, vector<int> arr, int& flag) {
 vector<int> missingNumbers(vector<int> arr, vector<int> brr) {
 	sort(arr.begin(), arr.end()); // nlogn
 	sort(brr.begin(), brr.end()); // nlogn
-	for (int i = 0; i < (int)arr.size(); i++) {
-		int index = binarrySearch(arr[i], 0, brr.size(), brr); // logn
-		if (index == -1) continue;
-		int freq1, freq2, flag = 0;
-		freq1 = calculateFreq(i, arr, flag);
-		freq2 = calculateFreq(index, brr, index);
-		if (freq1 == freq2) {
-			i += freq1 - 1;
-			while (freq1 >= 1) {
-				brr.erase(brr.begin() + index);
-				freq1--;
+	vector<int> result; 
+	for (int i = 0; i < (int)brr.size() - 1; i++) {
+		int index = binarrySearch(brr[i], 0, arr.size(), arr); // logn
+
+		if (index != -1 ) {
+			int freq1 = calculateFreq(brr[i], brr);
+			int freq2 = calculateFreq(arr[index], arr);
+			if (freq1 != freq2) {
+				result.push_back(brr[i]);
 			}
 		}
-		else {
-			while (freq2 > 1) {
-				brr.erase(brr.begin() + index);
-				freq2--;
-			}
-		}
+		else 
+		result.push_back(brr[i]);
 	}
-	return brr;
+	for (int i = 0; i < (int)result.size() - 1; i++) {
+		if (result[i] == result[i + 1]) {
+			result.erase( result.begin() + i );
+		}
+		
+	}
+
+	return result;
 }
 
 
@@ -84,6 +78,9 @@ int main() {
 	for (int i = 0; i < arr.size(); i++) {
 		cout << arr[i] << '\t';
 	}
+	cout << endl;
+
+	cout << calculateFreq( 4, arr);
 	cout << endl;
 	return 0;
 }
