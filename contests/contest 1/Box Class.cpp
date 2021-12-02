@@ -5,41 +5,39 @@ using namespace std;
 class Box {
 	int l, b, h;
 
-public: 
+public:
 	Box() : l(0), b(0), h(0)
 	{
 	}
-	Box(int l , int b , int h) : l(l), b(b), h(h)
+	Box(int l, int b, int h) : l(l), b(b), h(h)
 	{
-		if (l <= 0 || b <= 0 || h <= 0) 
-			throw "Box dimentions must be greater than 0!";
 	}
-	Box(const Box& box) : l(box.getLength()), b(box.getBreadth() ), h(box.getHeight())
+	Box(const Box& box) : l(box.getLength()), b(box.getBreadth()), h(box.getHeight())
 	{
 	}
 	int getLength() const {
-		return l; 
+		return l;
 	}
 	int getBreadth() const {
-		return b; 
+		return b;
 	}
 	int getHeight() const {
 		return h;
 	}
-	long CalculateVolume() const {
-		return l * h * b;
+	long long CalculateVolume() const {
+		return (long long)l * h * b;
 	}
 
 };
-bool operator<(Box b , Box box) {
 
+bool operator<(Box b, Box box) {
 	if (b.getLength() != box.getLength())
 		return b.getLength() < box.getLength();
 
 	if (b.getBreadth() != box.getBreadth())
 		return b.getBreadth() < box.getBreadth();
 
-	if ( b.getHeight() != box.getHeight())
+	if (b.getHeight() != box.getHeight())
 		return b.getHeight() < box.getHeight();
 
 	return false;
@@ -47,9 +45,10 @@ bool operator<(Box b , Box box) {
 }
 ostream& operator<< (ostream& os, const Box& box) {
 
-	os << endl << box.getLength() << " " << box.getBreadth() << " " << box.getHeight() << endl;
+	os << box.getLength() << " " << box.getBreadth() << " " << box.getHeight();
 	return os;
 }
+
 
 void check2()
 {
