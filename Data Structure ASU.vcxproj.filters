@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Sheets\sheet 1\check-repeated-items-array.cpp">
+    <ClCompile Include="Sheets\sheet 1\dynamic-array.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

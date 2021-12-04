@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Sheets\sheet 1\check-repeated-items-array.cpp" />
+    <ClCompile Include="Sheets\sheet 1\dynamic-array.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
