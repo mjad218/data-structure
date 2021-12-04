@@ -9,3 +9,4 @@ visit my profile on HackerRank [@mjad218](https://www.hackerrank.com/mjad218)
 All contests are held on HackerRank. 
 1. Contest one [check contest one](https://www.hackerrank.com/contests/cse331-l1-assignment/challenges)
 2. Contest two [check contest two](https://www.hackerrank.com/contests/cse331-l2-report/challenges)
+3. Contest two [check contest three](https://www.hackerrank.com/contests/cse331-l3-report/challenges)
