@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Sheets\sheet 1\dynamic-array.cpp">
+    <ClCompile Include="Sheets\sheet 1\maximum-number-array-recursion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
