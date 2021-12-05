@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Sheets\sheet 1\maximum-number-array-recursion.cpp">
+    <ClCompile Include="Sheets\sheet 1\bubble-sort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
