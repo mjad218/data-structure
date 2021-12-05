@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Sheets\sheet 1\bubble-sort.cpp">
+    <ClCompile Include="Sheets\sheet 2\if-sum-two-numbers-array-equals-certain-number.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
