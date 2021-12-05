@@ -1,7 +1,7 @@
 # Data Structure and Algorithms
 University Assignments for the course: Data Structure and algorithms CSE331s 
 
-
+Faculty of Engineering Ain Shams University. Check university website @[Eng ASU](https://eng.asu.edu.eg)
 ## My Profile on HackerRank 
 visit my profile on HackerRank [@mjad218](https://www.hackerrank.com/mjad218)
 
