@@ -12,6 +12,6 @@ All contests are held on HackerRank.
 3. Contest two [check contest three](https://www.hackerrank.com/contests/cse331-l3-report/challenges)
 
 ## Sheets 
-All contests are held on HackerRank. 
+you can find our course problems on Google Drive. 
 1. Sheet one [check sheet one](https://drive.google.com/file/d/1vbhDh3pncqtuD0IAzmXs2Y8F6Bw1s2Wa/view?usp=sharing)
 
