@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Sheets\sheet 2\if-sum-two-numbers-array-equals-certain-number.cpp">
+    <ClCompile Include="contests\contest 3\Missing Numbers\3rd-solution.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

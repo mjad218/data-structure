@@ -16,7 +16,7 @@ bool includesSum(int arr[], int size, int givenNum) {
 	
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++) {
-			if (arr[i] + arr[j] == givenNum) {
+			if (i != j && arr[i] + arr[j] == givenNum) {
 				return true; 
 			}
 		}
