@@ -6,15 +6,15 @@ using namespace std;
 
 bool isMatching(char& parenthesis, stack<char>& parentheses) {
 	if(parenthesis == ')') {
-		if (parentheses.top() == '(') return true;
+		return parentheses.top() == '(' ? true : false;
 	}
 	if (parenthesis == '}') {
-		if (parentheses.top() == '}') return true;
+		return parentheses.top() == '{' ? true : false; 
 	}
 	if (parenthesis == ']') {
-		if (parentheses.top() == ']') return true;
+		return parentheses.top() == '[' ? true : false;
 	}
-	return false; 
+	return false;
 }
 
 string isBalanced(string s) {
@@ -42,6 +42,6 @@ string isBalanced(string s) {
 
 int main()
 {
-	cout << isBalanced("{[))]}");
+	cout << isBalanced("{[()]}");
 	return 0;
 }
