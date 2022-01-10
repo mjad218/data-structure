@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="contests\contest 3\Missing Numbers\3rd-solution.cpp">
+    <ClCompile Include="contests\contest 4\Balanced Brackets.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
