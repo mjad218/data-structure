@@ -8,42 +8,24 @@ struct Node {
 	Node* left;
 	Node* right;
 };
-
-bool checkBST(Node* root) {
-	// i try solving this problem using recursion
-	// first i will check if the root node has children or not
-	// second check if the right node is greater than the parent
-	// check if the left is less than the root
-	// has childs invoke a recursive call twice to the function with the left and right nodes
-	if (root == NULL)
-		return true;
-	if (root->left != NULL && root->right != NULL) {
-		if (root->right->data <= root->data) {
-			return false;
-		}
-		if (root->left->data >= root->data) {
-			return false;
-		}
-		if (root->left->data == root->right->data) {
-			return false;
-		}
-		return (checkBST(root->left) && checkBST(root->right) );
-	}	
-	if (root->right != NULL) {
-		if (root->right->data <= root->data) {
-			return false;
-		}
-		return checkBST(root->right);
+vector<int> nodes;
+void inOrderTraversal(Node* node) {
+	if (node == NULL) {
+		return;
 	}
-	if (root->left != NULL) {
-		if (root->left->data >= root->data) {
+	inOrderTraversal(node->left);
+	nodes.push_back(node->data);
+	inOrderTraversal(node->right);
+}
+bool checkBST(Node* root) {
+	inOrderTraversal(root);
+	for (int i = 1; i < nodes.size(); i++) {
+		if (nodes[i] <= nodes[i - 1]) {
 			return false;
 		}
-		return checkBST(root->left);
 	}
 	return true;
 }
-
 int main()
 {
 	return 0;
